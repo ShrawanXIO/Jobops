@@ -1,0 +1,63 @@
+user:
+  id: ""
+  name: ""
+  email: ""
+  phone: ""
+  location: ""
+  linkedin_url: ""
+  github_url: ""
+  resume_path: "resumes/your_cv.pdf"
+  notice_period: ""
+  work_authorisation: ""
+  willing_to_relocate: false
+  years_of_experience: 0
+  current_title: ""
+
+target:
+  titles: []
+  seniority_keywords: [senior, lead]
+  company_types: [product-based, SaaS, remote-first]
+  avoid_keywords: [contract, C2C, staffing agency, fresher]
+
+target_companies:
+  watchlist: []
+
+blocklist:
+  domains: []
+
+filters:
+  salary_floor_usd: 0
+  employment_type: full-time
+  locations_allowed: [remote, hybrid]
+  geographies: [global]
+  match_threshold: 65
+  daily_apply_cap: 10
+  max_applications_per_company: 1
+  company_cooldown_days: 90
+  freshness_hours: 24
+
+sources:
+  wellfound: true
+  weworkremotely: true
+  linkedin: true
+  remotive: true
+  direct_career_pages: true
+
+llm:
+  scorer_model: "mistral"
+  writer_model: "gpt-4o-mini"
+  max_tokens_email: 200
+  max_tokens_cover_letter: 300
+  max_tokens_report: 500
+
+behaviour:
+  auto_submit: false
+  headless: false
+  human_delay_min_ms: 800
+  human_delay_max_ms: 2400
+  between_applications_min_s: 480
+  between_applications_max_s: 720
+
+notifications:
+  daily_report_email: true
+  report_time: "20:00"
